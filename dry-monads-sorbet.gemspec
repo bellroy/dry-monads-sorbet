@@ -21,6 +21,12 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+  spec.post_install_message = <<~TEXT
+    dry-monads-sorbet has been installed/updated.
+
+    This gem ships with a bundled rbi file that must be copied into your project.
+    You can use the included "dry_monads_sorbet:update_rbi" to do this.
+  TEXT
 
   spec.add_dependency 'sorbet'
   spec.add_dependency 'sorbet-runtime'
