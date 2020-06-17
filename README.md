@@ -1,6 +1,6 @@
 ![dry-monads-sorbet](https://user-images.githubusercontent.com/2643026/69986703-dfc68200-1535-11ea-9035-38ecbdb67138.png)
 
-# Dry Monads Sorbet ![CI Badge](https://github.com/tricycle/dry-monads-sorbet/workflows/RSpec%20Test%20Suite/badge.svg)
+# Dry Monads Sorbet ![CI Badge](https://github.com/tricycle/dry-monads-sorbet/workflows/Continuous%20Integration/badge.svg)
 
 Sorbet type hints for Dry::Monads.
 
