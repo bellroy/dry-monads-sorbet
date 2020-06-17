@@ -1,3 +1,7 @@
+1.1.2
+
+* Fix an issue when used alongside `sorbet-rails`
+
 1.1.1
 
 * Remove the accidentally bundled `/rbi` directory.
