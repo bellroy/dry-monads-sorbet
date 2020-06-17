@@ -1,6 +1,10 @@
+1.1.3
+
+* Fix missing type annotation for `Dry::Monads::Maybe#value!`.
+
 1.1.2
 
-* Fix an issue when used alongside `sorbet-rails`
+* Fix an issue when used alongside `sorbet-rails`.
 
 1.1.1
 
@@ -12,4 +16,4 @@
 
 1.0.0
 
-* Initial release
+* Initial release.
