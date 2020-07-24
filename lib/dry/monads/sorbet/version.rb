@@ -3,7 +3,7 @@
 module Dry
   module Monads
     module Sorbet
-      VERSION = '1.1.4'
+      VERSION = '1.1.5'
     end
   end
 end

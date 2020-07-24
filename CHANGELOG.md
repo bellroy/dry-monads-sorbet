@@ -1,4 +1,4 @@
-Unreleased
+1.1.5
 
 * Fix inaccurate type annotations for `Dry::Monads::Maybe#fmap` and `Dry::Monads::Result#fmap`.
 
