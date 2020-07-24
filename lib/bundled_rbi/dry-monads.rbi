@@ -59,8 +59,8 @@ class Dry::Monads::Maybe
 
   sig do
     type_parameters(:New)
-      .params(blk: T.proc.params(arg0: Elem).returns(T.type_parameter(:out, :New)))
-      .returns(Dry::Monads::Maybe[T.type_parameter(:out, :New)])
+      .params(blk: T.proc.params(arg0: Elem).returns(T.type_parameter(:New)))
+      .returns(Dry::Monads::Maybe[T.type_parameter(:New)])
   end
   def fmap(&blk); end
 
@@ -180,7 +180,7 @@ class Dry::Monads::Result
 
   sig do
     type_parameters(:New)
-      .params(blk: T.proc.params(arg0: SuccessType).returns(T.type_parameter(:out, :New)))
+      .params(blk: T.proc.params(arg0: SuccessType).returns(T.type_parameter(:New)))
       .returns(Dry::Monads::Result[FailureType, T.type_parameter(:out, :New)])
   end
   def fmap(&blk); end
