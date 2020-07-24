@@ -181,7 +181,7 @@ class Dry::Monads::Result
   sig do
     type_parameters(:New)
       .params(blk: T.proc.params(arg0: SuccessType).returns(T.type_parameter(:New)))
-      .returns(Dry::Monads::Result[FailureType, T.type_parameter(:out, :New)])
+      .returns(Dry::Monads::Result[FailureType, T.type_parameter(:New)])
   end
   def fmap(&blk); end
 
