@@ -164,6 +164,9 @@ class Dry::Monads::Result
   extend T::Generic
   extend T::Helpers
 
+  FailureType = type_member
+  SuccessType = type_member
+
   abstract!
 
   sig do
