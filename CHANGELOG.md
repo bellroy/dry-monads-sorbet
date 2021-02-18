@@ -1,3 +1,7 @@
+UNRELEASED
+
+* Fix bundled RBI being incompatible with recent Sorbet releases due to `params()` and invalid use of `sealed!`.
+
 1.1.5
 
 * Fix inaccurate type annotations for `Dry::Monads::Maybe#fmap` and `Dry::Monads::Result#fmap`.

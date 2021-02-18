@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
     dry-monads-sorbet has been installed/updated.
 
     This gem ships with a bundled rbi file that must be copied into your project.
-    You can use the included "dry_monads_sorbet:update_rbi" to do this.
+    You can use the included "dry_monads_sorbet:update_rbi" Rake task to do this.
   TEXT
 
   spec.add_dependency 'sorbet'

@@ -45,8 +45,9 @@ class Dry::Monads::Maybe
   extend T::Generic
   extend T::Helpers
 
+  Elem = type_member
+
   abstract!
-  sealed!
 
   sig do
     type_parameters(:New)
@@ -131,7 +132,7 @@ class Dry::Monads::Maybe::None < Dry::Monads::Maybe
   def deconstruct; end
   def eql?(other); end
   def hash; end
-  sig {params().void}
+  sig {void}
   def initialize(); end
   def inspect; end
   def maybe(*arg0); end
@@ -149,7 +150,7 @@ end
 module Dry::Monads::Maybe::Mixin::Constructors
   sig {type_parameters(:T).params(value: T.nilable(T.type_parameter(:T))).returns(Dry::Monads::Maybe[T.type_parameter(:T)])}
   def Maybe(value); end
-  sig {type_parameters(:T).params().returns(Dry::Monads::Maybe[T.type_parameter(:out, :T)])}
+  sig {type_parameters(:T).returns(Dry::Monads::Maybe[T.type_parameter(:out, :T)])}
   def None; end
   sig {type_parameters(:T).params(value: T.type_parameter(:T)).returns(Dry::Monads::Maybe[T.type_parameter(:T)])}
   def Some(value = nil); end
@@ -163,8 +164,10 @@ class Dry::Monads::Result
   extend T::Generic
   extend T::Helpers
 
+  FailureType = type_member
+  SuccessType = type_member
+
   abstract!
-  sealed!
 
   sig do
     type_parameters(:NewSuccessType)
