@@ -1,4 +1,4 @@
-UNRELEASED
+1.1.6
 
 * Fix bundled RBI being incompatible with recent Sorbet releases due to `params()` and invalid use of `sealed!`.
 
