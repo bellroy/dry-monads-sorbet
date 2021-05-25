@@ -274,7 +274,7 @@ end
 class Array
   def blank?; end
   def extract_options!; end
-  def self.wrap(object); end
+  def self.try_convert(arg0); end
   def to_default_s; end
   def to_formatted_s(format = nil); end
   def to_param; end

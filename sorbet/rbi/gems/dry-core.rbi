@@ -7,7 +7,7 @@
 #
 #   https://github.com/sorbet/sorbet-typed/new/master?filename=lib/dry-core/all/dry-core.rbi
 #
-# dry-core-0.4.9
+# dry-core-0.5.0
 
 module Dry
 end

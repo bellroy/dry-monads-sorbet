@@ -37,14 +37,6 @@ end
 
 class ActiveSupport::Cache::FileStore
   include ::ActiveSupport::Cache::Strategy::LocalCache
-  DIR_FORMATTER = ::T.let(nil, ::T.untyped)
-  FILENAME_MAX_SIZE = ::T.let(nil, ::T.untyped)
-  FILEPATH_MAX_SIZE = ::T.let(nil, ::T.untyped)
-  GITKEEP_FILES = ::T.let(nil, ::T.untyped)
-end
-
-class ActiveSupport::Cache::MemoryStore
-  PER_ENTRY_OVERHEAD = ::T.let(nil, ::T.untyped)
 end
 
 class ActiveSupport::Cache::NullStore
@@ -63,9 +55,6 @@ module ActiveSupport::Configurable::ClassMethods
   def config(); end
 
   def configure(); end
-end
-
-module ActiveSupport::Configurable::ClassMethods
 end
 
 class ActiveSupport::Configurable::Configuration
@@ -90,15 +79,6 @@ class ActiveSupport::Deprecation
   def deprecation_horizon=(deprecation_horizon); end
 
   def initialize(deprecation_horizon=T.unsafe(nil), gem_name=T.unsafe(nil)); end
-  DEFAULT_BEHAVIORS = ::T.let(nil, ::T.untyped)
-end
-
-module ActiveSupport::Deprecation::Reporting
-  RAILS_GEM_ROOT = ::T.let(nil, ::T.untyped)
-end
-
-class ActiveSupport::Deprecation
-  extend ::ActiveSupport::Deprecation::InstanceDelegator::OverrideDelegators
 end
 
 class ActiveSupport::Digest
@@ -190,20 +170,6 @@ module ActiveSupport::Gzip
   def self.decompress(source); end
 end
 
-class ActiveSupport::InheritableOptions
-  def inheritable_copy(); end
-
-  def initialize(parent=T.unsafe(nil)); end
-end
-
-class ActiveSupport::InheritableOptions
-end
-
-module ActiveSupport::JSON
-  DATETIME_REGEX = ::T.let(nil, ::T.untyped)
-  DATE_REGEX = ::T.let(nil, ::T.untyped)
-end
-
 module ActiveSupport::JSON::Encoding
 end
 
@@ -271,16 +237,6 @@ class ActiveSupport::LogSubscriber
   def unknown(progname=T.unsafe(nil), &block); end
 
   def warn(progname=T.unsafe(nil), &block); end
-  BLACK = ::T.let(nil, ::T.untyped)
-  BLUE = ::T.let(nil, ::T.untyped)
-  BOLD = ::T.let(nil, ::T.untyped)
-  CLEAR = ::T.let(nil, ::T.untyped)
-  CYAN = ::T.let(nil, ::T.untyped)
-  GREEN = ::T.let(nil, ::T.untyped)
-  MAGENTA = ::T.let(nil, ::T.untyped)
-  RED = ::T.let(nil, ::T.untyped)
-  WHITE = ::T.let(nil, ::T.untyped)
-  YELLOW = ::T.let(nil, ::T.untyped)
 end
 
 class ActiveSupport::MessageEncryptor
@@ -436,9 +392,6 @@ module ActiveSupport::Multibyte::Unicode
   def unpack_graphemes(string); end
 
   def upcase(string); end
-  NORMALIZATION_FORMS = ::T.let(nil, ::T.untyped)
-  NORMALIZATION_FORM_ALIASES = ::T.let(nil, ::T.untyped)
-  UNICODE_VERSION = ::T.let(nil, ::T.untyped)
 end
 
 module ActiveSupport::Multibyte::Unicode
@@ -552,7 +505,6 @@ end
 
 module ActiveSupport::NumberHelper
   extend ::ActiveSupport::Autoload
-  extend ::ActiveSupport::NumberHelper
 end
 
 class ActiveSupport::OptionMerger
@@ -574,9 +526,6 @@ class ActiveSupport::OrderedHash
   def to_yaml_type(); end
 end
 
-class ActiveSupport::OrderedHash
-end
-
 class ActiveSupport::OrderedOptions
   def [](key); end
 
@@ -585,9 +534,6 @@ class ActiveSupport::OrderedOptions
   def _get(_); end
 
   def method_missing(name, *args); end
-end
-
-class ActiveSupport::OrderedOptions
 end
 
 module ActiveSupport::Rescuable
@@ -599,12 +545,7 @@ end
 module ActiveSupport::Rescuable::ClassMethods
   def handler_for_rescue(exception, object: T.unsafe(nil)); end
 
-  def rescue_from(*klasses, with: T.unsafe(nil), &block); end
-
   def rescue_with_handler(exception, object: T.unsafe(nil), visited_exceptions: T.unsafe(nil)); end
-end
-
-module ActiveSupport::Rescuable::ClassMethods
 end
 
 module ActiveSupport::Rescuable
@@ -727,8 +668,6 @@ class ActiveSupport::SafeBuffer
   def upcase(*args, &block); end
 
   def upcase!(*args); end
-  UNSAFE_STRING_METHODS = ::T.let(nil, ::T.untyped)
-  UNSAFE_STRING_METHODS_WITH_BACKREF = ::T.let(nil, ::T.untyped)
 end
 
 class ActiveSupport::SafeBuffer::SafeConcatError
@@ -736,9 +675,6 @@ class ActiveSupport::SafeBuffer::SafeConcatError
 end
 
 class ActiveSupport::SafeBuffer::SafeConcatError
-end
-
-class ActiveSupport::SafeBuffer
 end
 
 class ActiveSupport::StringInquirer
@@ -994,11 +930,6 @@ class Array
   def shelljoin(); end
 
   def to_h(); end
-
-end
-
-class Array
-  def self.try_convert(_); end
 end
 
 BasicObject::BasicObject = BasicObject
@@ -1034,6 +965,77 @@ class Binding
   def irb(); end
 end
 
+class Bundler::APIResponseInvalidDependenciesError
+  def status_code(); end
+end
+
+class Bundler::APIResponseInvalidDependenciesError
+end
+
+class Bundler::CurrentRuby
+  def jruby_30?(); end
+
+  def jruby_3?(); end
+
+  def maglev_30?(); end
+
+  def maglev_3?(); end
+
+  def mingw_30?(); end
+
+  def mingw_3?(); end
+
+  def mri_30?(); end
+
+  def mri_3?(); end
+
+  def mswin64_30?(); end
+
+  def mswin64_3?(); end
+
+  def mswin_30?(); end
+
+  def mswin_3?(); end
+
+  def on_30?(); end
+
+  def on_3?(); end
+
+  def rbx_30?(); end
+
+  def rbx_3?(); end
+
+  def ruby_30?(); end
+
+  def ruby_3?(); end
+
+  def truffleruby_30?(); end
+
+  def truffleruby_3?(); end
+
+  def x64_mingw_30?(); end
+
+  def x64_mingw_3?(); end
+end
+
+class Bundler::Definition
+  def dependencies_for(groups); end
+
+  def disable_multisource?(); end
+
+  def most_specific_locked_platform(); end
+
+  def requested_dependencies(); end
+end
+
+class Bundler::DepProxy
+  def clone(); end
+end
+
+class Bundler::DepProxy
+  def self.get_proxy(dep, platform); end
+end
+
 class Bundler::Dependency
   def branch(); end
 
@@ -1044,6 +1046,10 @@ end
 
 Bundler::Deprecate = Gem::Deprecate
 
+class Bundler::Dsl
+  def check_primary_source_safety(); end
+end
+
 class Bundler::Env
 end
 
@@ -1053,6 +1059,16 @@ class Bundler::Env
   def self.report(options=T.unsafe(nil)); end
 
   def self.write(io); end
+end
+
+class Bundler::EnvironmentPreserver
+  def replace_with_backup(); end
+end
+
+class Bundler::EnvironmentPreserver
+  def self.env_to_hash(env); end
+
+  def self.from_env(); end
 end
 
 class Bundler::Fetcher
@@ -1236,6 +1252,8 @@ class Bundler::GemHelper
 
   def base(); end
 
+  def build_checksum(built_gem_path=T.unsafe(nil)); end
+
   def build_gem(); end
 
   def built_gem_path(); end
@@ -1243,6 +1261,10 @@ class Bundler::GemHelper
   def clean?(); end
 
   def committed?(); end
+
+  def current_branch(); end
+
+  def default_remote(); end
 
   def gem_command(); end
 
@@ -1278,6 +1300,8 @@ class Bundler::GemHelper
 
   def spec_path(); end
 
+  def tag_prefix=(tag_prefix); end
+
   def tag_version(); end
 
   def version(); end
@@ -1293,6 +1317,20 @@ class Bundler::GemHelper
   def self.instance(); end
 
   def self.instance=(instance); end
+
+  def self.tag_prefix=(prefix); end
+end
+
+class Bundler::GemHelpers::PlatformMatch
+  def self.specificity_score(spec_platform, user_platform); end
+end
+
+module Bundler::GemHelpers
+  def self.local_platform(); end
+
+  def self.same_deps(spec, exemplary_spec); end
+
+  def self.same_specificity(platform, spec, exemplary_spec); end
 end
 
 class Bundler::GemVersionPromoter
@@ -1380,7 +1418,7 @@ end
 class Bundler::Installer
   def generate_bundler_executable_stubs(spec, options=T.unsafe(nil)); end
 
-  def generate_standalone_bundler_executable_stubs(spec); end
+  def generate_standalone_bundler_executable_stubs(spec, options=T.unsafe(nil)); end
 
   def initialize(root, definition); end
 
@@ -1397,18 +1435,14 @@ class Bundler::Installer
   def self.install(root, definition, options=T.unsafe(nil)); end
 end
 
-class Bundler::Molinillo::DependencyGraph
-  include ::Enumerable
+class Bundler::LazySpecification
+  def eql?(other); end
+
+  def platform_string(); end
 end
 
-class Bundler::Molinillo::DependencyGraph::Log
-  extend ::Enumerable
-end
-
-class Bundler::Molinillo::DependencyGraph::Vertex
-  def _recursive_predecessors(vertices=T.unsafe(nil)); end
-
-  def _recursive_successors(vertices=T.unsafe(nil)); end
+module Bundler::Molinillo::SpecificationProvider
+  def dependencies_equal?(dependencies, other_dependencies); end
 end
 
 module Bundler::Plugin::API::Source
@@ -1449,6 +1483,8 @@ module Bundler::Plugin::API::Source
   def install_path(); end
 
   def installed?(); end
+
+  def local!(); end
 
   def name(); end
 
@@ -1491,6 +1527,8 @@ class Bundler::Plugin::Index
   def installed_plugins(); end
 
   def plugin_commands(plugin); end
+
+  def unregister_plugin(name); end
 end
 
 class Bundler::Plugin::Index::CommandConflict
@@ -1537,6 +1575,8 @@ end
 
 module Bundler::Plugin
   def self.list(); end
+
+  def self.uninstall(names, options); end
 end
 
 class Bundler::ProcessLock
@@ -1544,6 +1584,27 @@ end
 
 class Bundler::ProcessLock
   def self.lock(bundle_path=T.unsafe(nil)); end
+end
+
+class Bundler::Resolver
+  include ::Bundler::GemHelpers
+  def results_for(dependency, base); end
+end
+
+class Bundler::Resolver::SpecGroup
+  def activate_all_platforms!(); end
+
+  def activated_platforms(); end
+
+  def activated_platforms=(activated_platforms); end
+
+  def partitioned_dependency_names_for_activated_platforms(); end
+
+  def sorted_activated_platforms(); end
+end
+
+class Bundler::Resolver::SpecGroup
+  def self.create_for(specs, all_platforms, specific_platform); end
 end
 
 class Bundler::Retry
@@ -1574,13 +1635,9 @@ class Bundler::Retry
   def self.default_retries(); end
 end
 
-class Bundler::RubyGemsGemInstaller
-end
-
-class Bundler::RubyGemsGemInstaller
-end
-
 class Bundler::RubygemsIntegration
+  def add_default_gems_to(specs); end
+
   def add_to_load_path(paths); end
 
   def all_specs(); end
@@ -1595,6 +1652,8 @@ class Bundler::RubygemsIntegration
 
   def gem_remote_fetcher(); end
 
+  def load_env_plugins(); end
+
   def plain_specs(); end
 
   def plain_specs=(specs); end
@@ -1602,6 +1661,10 @@ class Bundler::RubygemsIntegration
   def stub_rubygems(specs); end
 
   def use_gemdeps(gemfile); end
+end
+
+class Bundler::Settings
+  STRING_KEYS = ::T.let(nil, ::T.untyped)
 end
 
 class Bundler::Settings::Mirror
@@ -1663,12 +1726,48 @@ class Bundler::Settings::Validator
   def self.validate!(key, value, settings); end
 end
 
+class Bundler::Settings
+  def self.key_for(key); end
+end
+
+class Bundler::Source
+  def cached!(); end
+
+  def local!(); end
+
+  def remote!(); end
+end
+
 class Bundler::Source::Git
   def glob(); end
+
+  def local?(); end
+end
+
+class Bundler::Source::Rubygems
+  def disable_multisource?(); end
+end
+
+class Bundler::SourceList
+  def disable_multisource?(); end
+
+  def global_path_source(); end
+
+  def merged_gem_lockfile_sections!(); end
 end
 
 class Bundler::SpecSet
   include ::Enumerable
+end
+
+class Bundler::StubSpecification
+  def default_gem?(); end
+
+  def extensions(); end
+
+  def gem_build_complete_path(); end
+
+  def manually_installed?(); end
 end
 
 class Bundler::Thor
@@ -1676,6 +1775,7 @@ class Bundler::Thor
   include ::Bundler::Thor::Invocation
   include ::Bundler::Thor::Shell
   def help(command=T.unsafe(nil), subcommand=T.unsafe(nil)); end
+  Correctable = ::T.let(nil, ::T.untyped)
   HELP_MAPPINGS = ::T.let(nil, ::T.untyped)
   TEMPLATE_EXTNAME = ::T.let(nil, ::T.untyped)
   THOR_RESERVED_WORDS = ::T.let(nil, ::T.untyped)
@@ -2156,8 +2256,6 @@ end
 module Bundler::Thor::CoreExt
 end
 
-Bundler::Thor::Correctable = DidYouMean::Correctable
-
 class Bundler::Thor::DynamicCommand
   def initialize(name, options=T.unsafe(nil)); end
 end
@@ -2312,13 +2410,6 @@ class Bundler::Thor::NestedContext
 end
 
 class Bundler::Thor::NestedContext
-end
-
-class Bundler::Thor::NoKwargSpellChecker
-  def initialize(dictionary); end
-end
-
-class Bundler::Thor::NoKwargSpellChecker
 end
 
 class Bundler::Thor::Option
@@ -2545,6 +2636,8 @@ end
 class Bundler::Thor::Shell::Color
   def are_colors_disabled?(); end
 
+  def are_colors_supported?(); end
+
   def diff_lcs_loaded?(); end
 
   def output_diff_line(diff); end
@@ -2609,7 +2702,6 @@ end
 Bundler::Thor::Task = Bundler::Thor::Command
 
 class Bundler::Thor::UndefinedCommandError
-  include ::DidYouMean::Correctable
   def all_commands(); end
 
   def command(); end
@@ -2636,7 +2728,6 @@ end
 Bundler::Thor::UndefinedTaskError = Bundler::Thor::UndefinedCommandError
 
 class Bundler::Thor::UnknownArgumentError
-  include ::DidYouMean::Correctable
   def initialize(switches, unknown); end
 
   def switches(); end
@@ -2792,7 +2883,7 @@ class Bundler::UI::Shell
 
   def debug?(); end
 
-  def error(msg, newline=T.unsafe(nil)); end
+  def error(msg, newline=T.unsafe(nil), color=T.unsafe(nil)); end
 
   def info(msg, newline=T.unsafe(nil)); end
 
@@ -2814,7 +2905,7 @@ class Bundler::UI::Shell
 
   def unprinted_warnings(); end
 
-  def warn(msg, newline=T.unsafe(nil)); end
+  def warn(msg, newline=T.unsafe(nil), color=T.unsafe(nil)); end
 
   def yes?(msg); end
   LEVELS = ::T.let(nil, ::T.untyped)
@@ -3331,17 +3422,21 @@ module Bundler::VersionRanges
 end
 
 module Bundler
+  def self.most_specific_locked_platform?(platform); end
+
   def self.original_exec(*args); end
 
   def self.original_system(*args); end
+
+  def self.preferred_gemfile_name(); end
+
+  def self.reset_settings_and_root!(); end
 
   def self.unbundled_env(); end
 
   def self.unbundled_exec(*args); end
 
   def self.unbundled_system(*args); end
-
-  def self.with_unbundled_env(); end
 end
 
 module Byebug
@@ -3886,19 +3981,10 @@ class Date
   def readable_inspect(); end
 
   def to_default_s(); end
-
-  def to_formatted_s(format=T.unsafe(nil)); end
-
-  DATE_FORMATS = ::T.let(nil, ::T.untyped)
 end
 
 class Date::Infinity
   def initialize(d=T.unsafe(nil)); end
-end
-
-module DateAndTime::Calculations
-  DAYS_INTO_WEEK = ::T.let(nil, ::T.untyped)
-  WEEKEND_DAYS = ::T.let(nil, ::T.untyped)
 end
 
 class DateTime
@@ -3921,100 +4007,6 @@ class Delegator
   RUBYGEMS_ACTIVATION_MONITOR = ::T.let(nil, ::T.untyped)
 end
 
-class DidYouMean::ClassNameChecker
-  def class_name(); end
-
-  def class_names(); end
-
-  def corrections(); end
-
-  def initialize(exception); end
-
-  def scopes(); end
-end
-
-module DidYouMean::Correctable
-  def corrections(); end
-
-  def original_message(); end
-
-  def spell_checker(); end
-
-  def to_s(); end
-end
-
-module DidYouMean::Jaro
-  def self.distance(str1, str2); end
-end
-
-module DidYouMean::JaroWinkler
-  def self.distance(str1, str2); end
-end
-
-class DidYouMean::KeyErrorChecker
-  def corrections(); end
-
-  def initialize(key_error); end
-end
-
-class DidYouMean::KeyErrorChecker
-end
-
-module DidYouMean::Levenshtein
-  def self.distance(str1, str2); end
-
-  def self.min3(a, b, c); end
-end
-
-class DidYouMean::MethodNameChecker
-  def corrections(); end
-
-  def initialize(exception); end
-
-  def method_name(); end
-
-  def method_names(); end
-
-  def receiver(); end
-  RB_RESERVED_WORDS = ::T.let(nil, ::T.untyped)
-end
-
-class DidYouMean::NullChecker
-  def corrections(); end
-
-  def initialize(*_); end
-end
-
-class DidYouMean::PlainFormatter
-  def message_for(corrections); end
-end
-
-class DidYouMean::PlainFormatter
-end
-
-class DidYouMean::VariableNameChecker
-  def corrections(); end
-
-  def cvar_names(); end
-
-  def initialize(exception); end
-
-  def ivar_names(); end
-
-  def lvar_names(); end
-
-  def method_names(); end
-
-  def name(); end
-  RB_RESERVED_WORDS = ::T.let(nil, ::T.untyped)
-end
-
-module DidYouMean
-  def self.formatter(); end
-
-  def self.formatter=(formatter); end
-end
-
 class Dir
   def children(); end
 
@@ -4023,7 +4015,6 @@ end
 
 class Dir
   def self.exists?(_); end
-
 end
 
 module Docile
@@ -4042,6 +4033,7 @@ module Dry::Core::Constants
   EMPTY_OPTS = ::T.let(nil, ::T.untyped)
   EMPTY_SET = ::T.let(nil, ::T.untyped)
   EMPTY_STRING = ::T.let(nil, ::T.untyped)
+  IDENTITY = ::T.let(nil, ::T.untyped)
   Self = ::T.let(nil, ::T.untyped)
   Undefined = ::T.let(nil, ::T.untyped)
 end
@@ -4056,6 +4048,7 @@ module Dry::Monads
   EMPTY_OPTS = ::T.let(nil, ::T.untyped)
   EMPTY_SET = ::T.let(nil, ::T.untyped)
   EMPTY_STRING = ::T.let(nil, ::T.untyped)
+  IDENTITY = ::T.let(nil, ::T.untyped)
   Self = ::T.let(nil, ::T.untyped)
   Traverse = ::T.let(nil, ::T.untyped)
   Undefined = ::T.let(nil, ::T.untyped)
@@ -4145,7 +4138,6 @@ class ERB
   def def_method(mod, methodname, fname=T.unsafe(nil)); end
 
   def def_module(methodname=T.unsafe(nil)); end
-
 end
 
 class ERB::Compiler::Scanner
@@ -4183,8 +4175,6 @@ end
 module Enumerable
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
   def as_json(options=T.unsafe(nil)); end
-
-  def chain(*_); end
 
   def sum(*_); end
 end
@@ -4909,7 +4899,6 @@ end
 
 module Exception2MessageMapper
   def bind(cl); end
-
 end
 
 Exception2MessageMapper::E2MM = Exception2MessageMapper
@@ -8696,13 +8685,42 @@ end
 
 module Gem
   ConfigMap = ::T.let(nil, ::T.untyped)
+  HAVE_OPENSSL = ::T.let(nil, ::T.untyped)
+  KERNEL_WARN_IGNORES_INTERNAL_ENTRIES = ::T.let(nil, ::T.untyped)
   RbConfigPriorities = ::T.let(nil, ::T.untyped)
   RubyGemsVersion = ::T.let(nil, ::T.untyped)
   UNTAINT = ::T.let(nil, ::T.untyped)
 end
 
-class Gem::Exception
-  extend ::Gem::Deprecate
+class Gem::BasicSpecification
+  def plugins(); end
+end
+
+class Gem::Command
+  def deprecated?(); end
+end
+
+class Gem::ConfigFile
+  def ipv4_fallback_enabled(); end
+
+  def ipv4_fallback_enabled=(ipv4_fallback_enabled); end
+  DEFAULT_IPV4_FALLBACK_ENABLED = ::T.let(nil, ::T.untyped)
+end
+
+class Gem::Dependency
+  def filters_bundler?(); end
+end
+
+module Gem::Deprecate
+  def deprecate(name, repl, year, month); end
+end
+
+module Gem::Deprecate
+  def self.next_rubygems_major_version(); end
+
+  def self.rubygems_deprecate(name, replacement=T.unsafe(nil)); end
+
+  def self.rubygems_deprecate_command(); end
 end
 
 class Gem::Ext::BuildError
@@ -8714,12 +8732,55 @@ end
 class Gem::Ext::ExtConfBuilder
 end
 
-Gem::Ext::ExtConfBuilder::FileEntry = FileUtils::Entry_
-
 class Gem::Ext::ExtConfBuilder
-  def self.build(extension, dest_path, results, args=T.unsafe(nil), lib_dir=T.unsafe(nil)); end
+  def self.build(extension, dest_path, results, args=T.unsafe(nil), lib_dir=T.unsafe(nil), extension_dir=T.unsafe(nil)); end
 
-  def self.get_relative_path(path); end
+  def self.get_relative_path(path, base); end
+end
+
+class Gem::Installer
+  include ::Gem::InstallerUninstallerUtils
+  def ensure_writable_dir(dir); end
+
+  def generate_plugins(); end
+end
+
+Gem::Installer::ExtensionBuildError = Gem::Ext::BuildError
+
+class Gem::Installer::FakePackage
+  def copy_to(path); end
+
+  def data_mode(); end
+
+  def data_mode=(data_mode); end
+
+  def dir_mode(); end
+
+  def dir_mode=(dir_mode); end
+
+  def extract_files(destination_dir, pattern=T.unsafe(nil)); end
+
+  def initialize(spec); end
+
+  def prog_mode(); end
+
+  def prog_mode=(prog_mode); end
+
+  def spec(); end
+
+  def spec=(spec); end
+end
+
+class Gem::Installer::FakePackage
+end
+
+module Gem::InstallerUninstallerUtils
+  def regenerate_plugins_for(spec, plugins_dir); end
+
+  def remove_plugins_for(spec, plugins_dir); end
+end
+
+module Gem::InstallerUninstallerUtils
 end
 
 class Gem::Package
@@ -8908,9 +8969,19 @@ class Gem::PathSupport
   def spec_cache_dir(); end
 end
 
+class Gem::Platform
+  def self.match_gem?(platform, gem_name); end
+
+  def self.match_spec?(spec); end
+end
+
 class Gem::RemoteFetcher::FetchError
   include ::Gem::UriParsing
   def initialize(message, uri); end
+
+  def original_uri(); end
+
+  def original_uri=(original_uri); end
 
   def uri(); end
 
@@ -8932,16 +9003,53 @@ class Gem::Request
   extend ::Gem::Text
 end
 
+class Gem::Requirement
+  def _sorted_requirements(); end
+end
+
+class Gem::Resolver::APISet::GemParser
+  def parse(line); end
+end
+
+class Gem::Resolver::APISet::GemParser
+end
+
+class Gem::Resolver::APISpecification
+  def self.new(set, api_data); end
+end
+
+class Gem::Resolver::ActivationRequest
+  def eql?(other); end
+end
+
 class Gem::Resolver::CurrentSet
 end
 
 class Gem::Resolver::CurrentSet
+end
+
+class Gem::Resolver::IndexSpecification
+  def ==(other); end
+end
+
+class Gem::Resolver::InstallerSet
+  def force(); end
+
+  def force=(force); end
 end
 
 class Gem::Resolver::LocalSpecification
 end
 
 class Gem::Resolver::LocalSpecification
+end
+
+module Gem::Resolver::Molinillo::Delegates::ResolutionState
+  def unused_unwind_options(); end
+end
+
+module Gem::Resolver::Molinillo::Delegates::SpecificationProvider
+  def dependencies_equal?(dependencies, other_dependencies); end
 end
 
 class Gem::Resolver::Molinillo::DependencyGraph::Log
@@ -8968,6 +9076,106 @@ end
 
 class Gem::Resolver::Molinillo::DependencyGraph::Log
   extend ::Enumerable
+end
+
+class Gem::Resolver::Molinillo::DependencyGraph::Vertex
+  def _path_to?(other, visited=T.unsafe(nil)); end
+
+  def _recursive_predecessors(vertices=T.unsafe(nil)); end
+
+  def _recursive_successors(vertices=T.unsafe(nil)); end
+end
+
+class Gem::Resolver::Molinillo::ResolutionState
+  def unused_unwind_options(); end
+
+  def unused_unwind_options=(_); end
+end
+
+class Gem::Resolver::Molinillo::Resolver::Resolution::Conflict
+  def possibility_set(); end
+
+  def possibility_set=(_); end
+
+  def underlying_error(); end
+
+  def underlying_error=(_); end
+end
+
+class Gem::Resolver::Molinillo::Resolver::Resolution::PossibilitySet
+  def dependencies(); end
+
+  def dependencies=(_); end
+
+  def latest_version(); end
+
+  def possibilities(); end
+
+  def possibilities=(_); end
+end
+
+class Gem::Resolver::Molinillo::Resolver::Resolution::PossibilitySet
+  def self.[](*_); end
+
+  def self.members(); end
+end
+
+class Gem::Resolver::Molinillo::Resolver::Resolution::UnwindDetails
+  include ::Comparable
+  def all_requirements(); end
+
+  def conflicting_requirements(); end
+
+  def conflicting_requirements=(_); end
+
+  def requirement_tree(); end
+
+  def requirement_tree=(_); end
+
+  def requirement_trees(); end
+
+  def requirement_trees=(_); end
+
+  def requirements_unwound_to_instead(); end
+
+  def requirements_unwound_to_instead=(_); end
+
+  def reversed_requirement_tree_index(); end
+
+  def state_index(); end
+
+  def state_index=(_); end
+
+  def state_requirement(); end
+
+  def state_requirement=(_); end
+
+  def sub_dependencies_to_avoid(); end
+
+  def unwinding_to_primary_requirement?(); end
+end
+
+class Gem::Resolver::Molinillo::Resolver::Resolution::UnwindDetails
+  def self.[](*_); end
+
+  def self.members(); end
+end
+
+module Gem::Resolver::Molinillo::SpecificationProvider
+  def dependencies_equal?(dependencies, other_dependencies); end
+end
+
+class Gem::Resolver::Molinillo::VersionConflict
+  include ::Gem::Resolver::Molinillo::Delegates::SpecificationProvider
+  def message_with_trees(opts=T.unsafe(nil)); end
+
+  def specification_provider(); end
+end
+
+class Gem::Resolver::Specification
+  def required_ruby_version(); end
+
+  def required_rubygems_version(); end
 end
 
 class Gem::RuntimeRequirementNotMetError
@@ -9103,6 +9311,8 @@ module Gem::Security
 
   def self.create_cert_self_signed(subject, key, age=T.unsafe(nil), extensions=T.unsafe(nil), serial=T.unsafe(nil)); end
 
+  def self.create_digest(algorithm=T.unsafe(nil)); end
+
   def self.create_key(length=T.unsafe(nil), algorithm=T.unsafe(nil)); end
 
   def self.email_to_name(email_address); end
@@ -9142,7 +9352,7 @@ class Gem::SpecFetcher
 
   def specs(); end
 
-  def suggest_gems_from_name(gem_name, type=T.unsafe(nil)); end
+  def suggest_gems_from_name(gem_name, type=T.unsafe(nil), num_results=T.unsafe(nil)); end
 
   def tuples_for(source, type, gracefully_ignore=T.unsafe(nil)); end
 end
@@ -9156,12 +9366,24 @@ end
 class Gem::Specification
   include ::Bundler::MatchPlatform
   include ::Bundler::GemHelpers
+  def _deprecated_validate_dependencies(); end
+
+  def _deprecated_validate_metadata(); end
+
+  def _deprecated_validate_permissions(); end
+
+  def removed_method_calls(); end
+
   def to_ruby(); end
+  REMOVED_METHODS = ::T.let(nil, ::T.untyped)
 end
 
 class Gem::Specification
   extend ::Gem::Deprecate
   extend ::Enumerable
+  def self.latest_spec_for(name); end
+
+  def self.stubs_for_pattern(pattern, match_platform=T.unsafe(nil)); end
 end
 
 class Gem::SpecificationPolicy
@@ -9178,9 +9400,15 @@ class Gem::SpecificationPolicy
 
   def validate_dependencies(); end
 
+  def validate_duplicate_dependencies(); end
+
   def validate_metadata(); end
 
+  def validate_optional(strict); end
+
   def validate_permissions(); end
+
+  def validate_required!(); end
   HOMEPAGE_URI_PATTERN = ::T.let(nil, ::T.untyped)
   LAZY = ::T.let(nil, ::T.untyped)
   LAZY_PATTERN = ::T.let(nil, ::T.untyped)
@@ -9191,10 +9419,6 @@ class Gem::SpecificationPolicy
 end
 
 class Gem::SpecificationPolicy
-end
-
-class Gem::StreamUI
-  def _deprecated_debug(statement); end
 end
 
 class Gem::StubSpecification
@@ -9242,7 +9466,33 @@ end
 
 Gem::UnsatisfiableDepedencyError = Gem::UnsatisfiableDependencyError
 
+module Gem::Util
+  def self._deprecated_silent_system(*command); end
+end
+
 Gem::Version::Requirement = Gem::Requirement
+
+module Gem
+  def self.activated_gem_paths(); end
+
+  def self.cache_home(); end
+
+  def self.config_home(); end
+
+  def self.data_home(); end
+
+  def self.disable_system_update_message(); end
+
+  def self.disable_system_update_message=(disable_system_update_message); end
+
+  def self.find_config_file(); end
+
+  def self.plugin_suffix_pattern(); end
+
+  def self.plugin_suffix_regexp(); end
+
+  def self.plugindir(install_dir=T.unsafe(nil)); end
+end
 
 module Guard::Deprecated::Dsl
   MORE_INFO_ON_UPGRADING_TO_GUARD_2 = ::T.let(nil, ::T.untyped)
@@ -9383,8 +9633,6 @@ end
 class Hash
   def self.try_convert(_); end
 end
-
-HashWithIndifferentAccess = ActiveSupport::HashWithIndifferentAccess
 
 Http = HTTP
 
@@ -10257,10 +10505,6 @@ module Kernel
   def self.require(_); end
 end
 
-class KeyError
-  include ::DidYouMean::Correctable
-end
-
 module Kwalify
   META_VALIDATOR = ::T.let(nil, ::T.untyped)
   RELEASE = ::T.let(nil, ::T.untyped)
@@ -10699,10 +10943,6 @@ module Mutex_m
   VERSION = ::T.let(nil, ::T.untyped)
 end
 
-class NameError
-  include ::DidYouMean::Correctable
-end
-
 module Nenv
   VERSION = ::T.let(nil, ::T.untyped)
 end
@@ -10743,8 +10983,6 @@ Net::HTTPClientError::EXCEPTION_TYPE = Net::HTTPServerException
 
 Net::HTTPClientErrorCode = Net::HTTPClientError
 
-Net::HTTPClientException = Net::HTTPServerException
-
 class Net::HTTPEarlyHints
   HAS_BODY = ::T.let(nil, ::T.untyped)
 end
@@ -10754,20 +10992,7 @@ end
 
 Net::HTTPFatalErrorCode = Net::HTTPClientError
 
-class Net::HTTPGatewayTimeout
-  HAS_BODY = ::T.let(nil, ::T.untyped)
-end
-
-class Net::HTTPGatewayTimeout
-end
-
-class Net::HTTPInformation
-end
-
-Net::HTTPInformationCode::EXCEPTION_TYPE = Net::HTTPError
-
-class Net::HTTPInformation
-end
+Net::HTTPInformationCode = Net::HTTPInformation
 
 class Net::HTTPLoopDetected
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -10815,14 +11040,9 @@ end
 class Net::HTTPRangeNotSatisfiable
 end
 
+Net::HTTPRedirection::EXCEPTION_TYPE = Net::HTTPRetriableError
+
 Net::HTTPRedirectionCode = Net::HTTPRedirection
-
-class Net::HTTPRequestTimeout
-  HAS_BODY = ::T.let(nil, ::T.untyped)
-end
-
-class Net::HTTPRequestTimeout
-end
 
 Net::HTTPRequestURITooLarge = Net::HTTPURITooLong
 
@@ -10836,13 +11056,9 @@ Net::HTTPServerErrorCode = Net::HTTPServerError
 
 Net::HTTPSession = Net::HTTP
 
-class Net::HTTPSuccess
-end
+Net::HTTPSuccess::EXCEPTION_TYPE = Net::HTTPError
 
-Net::HTTPSuccessCode::EXCEPTION_TYPE = Net::HTTPError
-
-class Net::HTTPSuccess
-end
+Net::HTTPSuccessCode = Net::HTTPSuccess
 
 class Net::HTTPURITooLong
   HAS_BODY = ::T.let(nil, ::T.untyped)
@@ -10958,8 +11174,6 @@ class Object
   include ::JSON::Ext::Generator::GeneratorMethods::Object
   include ::PP::ObjectMixin
   include ::ActiveSupport::ToJsonWithActiveSupportEncoder
-  def as_json(options=T.unsafe(nil)); end
-
   def html_safe?(); end
 
   def to_yaml(options=T.unsafe(nil)); end
@@ -11000,10 +11214,6 @@ class OpenSSL::BN
   def /(_); end
 
   def negative?(); end
-end
-
-module OpenSSL::Buffering
-  include ::ActiveSupport::ToJsonWithActiveSupportEncoder
 end
 
 module OpenSSL::KDF
@@ -11056,8 +11266,6 @@ module OpenSSL::SSL
 end
 
 class OpenSSL::SSL::SSLContext
-  def add_certificate(*_); end
-
   def alpn_protocols(); end
 
   def alpn_protocols=(alpn_protocols); end
@@ -12392,8 +12600,6 @@ end
 
 class Resolv::DNS
   def extract_resources(msg, name, typeclass); end
-
-  def getname(address); end
   RequestID = ::T.let(nil, ::T.untyped)
   RequestIDMutex = ::T.let(nil, ::T.untyped)
 end
@@ -13633,34 +13839,8 @@ module RubyToken
   def self.def_token(token_n, super_token=T.unsafe(nil), reading=T.unsafe(nil), *opts); end
 end
 
-module RubyVM::AbstractSyntaxTree
-end
-
 class RubyVM::AbstractSyntaxTree::Node
-  def children(); end
-
-  def first_column(); end
-
-  def first_lineno(); end
-
-  def last_column(); end
-
-  def last_lineno(); end
-
   def pretty_print_children(q, names=T.unsafe(nil)); end
-
-  def type(); end
-end
-
-class RubyVM::AbstractSyntaxTree::Node
-end
-
-module RubyVM::AbstractSyntaxTree
-  def self.of(_); end
-
-  def self.parse(_); end
-
-  def self.parse_file(_); end
 end
 
 module RubyVM::MJIT
@@ -14210,20 +14390,6 @@ Struct::Tms = Process::Tms
 
 class SynchronizedDelegator
   RUBYGEMS_ACTIVATION_MONITOR = ::T.let(nil, ::T.untyped)
-end
-
-module TZInfo::RubyCoreSupport
-  HALF_DAYS_IN_DAY = ::T.let(nil, ::T.untyped)
-end
-
-class TZInfo::ZoneinfoDataSource
-  DEFAULT_ALTERNATE_ISO3166_TAB_SEARCH_PATH = ::T.let(nil, ::T.untyped)
-  DEFAULT_SEARCH_PATH = ::T.let(nil, ::T.untyped)
-end
-
-class TZInfo::ZoneinfoTimezoneInfo
-  MAX_TIMESTAMP = ::T.let(nil, ::T.untyped)
-  MIN_TIMESTAMP = ::T.let(nil, ::T.untyped)
 end
 
 class Tempfile
