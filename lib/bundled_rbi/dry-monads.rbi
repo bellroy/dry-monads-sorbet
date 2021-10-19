@@ -132,8 +132,8 @@ class Dry::Monads::Maybe::None < Dry::Monads::Maybe
   def deconstruct; end
   def eql?(other); end
   def hash; end
-  sig {void}
-  def initialize(); end
+  sig {params(trace: T.untyped).void}
+  def initialize(trace = T.unsafe(nil)); end
   def inspect; end
   def maybe(*arg0); end
   def or(*args); end
@@ -551,7 +551,7 @@ module Dry::Monads::Do
   def self.for(*methods); end
   def self.halt(result); end
   def self.included(base); end
-  def self.wrap_method(target, method_name); end
+  def self.wrap_method(target, method, visibility); end
   extend Dry::Monads::Do::Mixin
 end
 module Dry::Monads::Do::Mixin

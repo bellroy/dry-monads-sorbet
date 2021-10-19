@@ -4,19 +4,14 @@ source 'https://rubygems.org'
 gemspec
 
 group :development, :test do
-  gem 'guard-livereload', require: false
-  gem 'guard-rspec'
   gem 'pry-byebug'
   gem 'rb-fsevent', require: false
   gem 'rb-readline'
-  gem 'reek'
   gem 'rspec'
   gem 'rubocop-rspec'
   gem 'rubocop'
-  gem 'shoulda-matchers', require: false
-  gem 'sqlite3'
   gem 'stackprof'
-  gem 'timecop'
+  gem 'tapioca'
 end
 
 group :test do

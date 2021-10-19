@@ -28,9 +28,10 @@ Gem::Specification.new do |spec|
     You can use the included "dry_monads_sorbet:update_rbi" Rake task to do this.
   TEXT
 
-  spec.add_dependency 'sorbet'
-  spec.add_dependency 'sorbet-runtime'
+  spec.add_dependency 'dry-equalizer'
   spec.add_dependency 'dry-monads'
+  spec.add_dependency 'sorbet-runtime'
+  spec.add_dependency 'sorbet'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'pry'

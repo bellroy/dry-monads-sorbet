@@ -2,3 +2,9 @@
 .
 --ignore
 /lib/dry/monads/sorbet.rb
+--ignore
+/lib/dry-monads-sorbet/railtie.rb
+--ignore
+vendor
+--ignore
+/sorbet/rbi/gems/rb-readline@0.5.5.rbi
