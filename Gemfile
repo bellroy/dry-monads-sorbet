@@ -12,6 +12,7 @@ group :development, :test do
   gem 'rubocop'
   gem 'stackprof'
   gem 'tapioca'
+  gem 'thor'
 end
 
 group :test do
