@@ -1,3 +1,5 @@
+**N.B. The Bellroy technology team are transitioning away from Ruby as their primary programming language, and will not longer actively update this repository. Contact us if you'd like to take over as the primary maintainer.**
+
 ![dry-monads-sorbet](https://user-images.githubusercontent.com/2643026/69986703-dfc68200-1535-11ea-9035-38ecbdb67138.png)
 
 # Dry Monads Sorbet ![CI Badge](https://github.com/tricycle/dry-monads-sorbet/workflows/Continuous%20Integration/badge.svg)
