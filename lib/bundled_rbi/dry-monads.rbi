@@ -152,8 +152,8 @@ module Dry::Monads::Maybe::Mixin::Constructors
   def Maybe(value); end
   sig {type_parameters(:T).returns(Dry::Monads::Maybe[T.type_parameter(:out, :T)])}
   def None; end
-  sig {type_parameters(:T).params(value: T.type_parameter(:T)).returns(Dry::Monads::Maybe[T.type_parameter(:T)])}
-  def Some(value = nil); end
+  sig {type_parameters(:T).params(value: T.type_parameter(:T), block: T.proc.returns(Dry::Monads::Maybe[T.type_parameter])).returns(Dry::Monads::Maybe[T.type_parameter(:T)])}
+  def Some(value = nil, &block); end
 end
 module Dry::Monads::Maybe::Hash
   def self.all(hash, trace = nil); end
